@@ -19,7 +19,20 @@ Elements: 5
 const itemsEl = document.querySelectorAll('.item');
 console.log('Number of categories:', itemsEl.length); 
 
+// for
+
 for (let i = 0; i < itemsEl.length; i += 1){
     console.log('Category:', itemsEl[i].querySelector('h2').textContent);
     console.log('Elements:', itemsEl[i].querySelectorAll('li').length);
 }
+
+// forEach
+console/console.warn('second var : forEach');
+
+itemsEl.forEach((item) => {
+    const title = item.querySelector('h2');
+    const allElements = item.querySelectorAll('li');
+    console.log('Category:', title.textContent);
+    console.log('Elements:', allElements.length);
+}
+)
