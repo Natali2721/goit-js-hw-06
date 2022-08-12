@@ -27,7 +27,7 @@ for (let i = 0; i < itemsEl.length; i += 1){
 }
 
 // forEach
-console/console.warn('second var : forEach');
+console.warn('second var : forEach');
 
 itemsEl.forEach((item) => {
     const title = item.querySelector('h2');
@@ -36,3 +36,16 @@ itemsEl.forEach((item) => {
     console.log('Elements:', allElements.length);
 }
 )
+
+//
+console.warn('third var : elem.children + for');
+
+const itemListElem = document.querySelector('#categories');
+
+for (let i = 0; i < itemListElem.children.length; i += 1){
+    console.log('Category:', itemListElem.children[i].querySelector('h2').textContent);
+    console.log('Elements:', itemListElem.children[i].querySelectorAll('li').length);
+}
+
+
+
