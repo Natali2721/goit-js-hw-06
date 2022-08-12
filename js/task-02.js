@@ -21,3 +21,65 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
+
+// oldschool
+console.warn('first var: "for" is commented');
+/*
+const listEl = document.querySelector('#ingredients');
+
+const items = [];
+
+for (let i = 0; i < ingredients.length; i += 1) {
+  const ingredient = ingredients[i];
+
+  const itemEl = document.createElement('li');
+  itemEl.classList.add('item');
+  itemEl.textContent = ingredients[i];
+
+  items.push(itemEl);
+}
+
+//console.log(items);
+
+listEl.append(...items);
+*/
+
+//new
+
+console.warn('second var: "map" is commented');
+
+/*
+const listEl = document.querySelector('#ingredients');
+
+const items = ingredients.map(ingredient => {
+  const itemEl = document.createElement('li');
+  itemEl.classList.add('item');
+  itemEl.textContent = ingredient;
+
+  return itemEl;
+});
+
+//console.log(items);
+
+listEl.append(...items);
+*/
+
+// function
+console.warn('third var: "function+map" is used')
+
+const listElem = document.querySelector('#ingredients');
+
+const makeIngridientsList = (ingredients) => {
+  return ingredients.map(ingredient => {
+    const itemEl = document.createElement('li');
+    itemEl.classList.add('item');
+    itemEl.textContent = ingredient;
+
+    return itemEl;
+  });
+};
+
+const ingredientsList = makeIngridientsList(ingredients);
+
+listElem.append(...ingredientsList);
+
