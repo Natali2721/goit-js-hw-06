@@ -25,14 +25,11 @@ const listRef = document.querySelector('.gallery');
 
 //console.log(listRef);
 
-
-
-//const newTechnologies = ["React", "TypeScript", "Node.js"];
 const galleryItems = images
   .map(({ url, alt }) => `<li class="gallery__item"><img src=${[url]} alt=${[alt]}></li>`)
   .join("")
 ;
 
-console.log(galleryItems);
+//console.log(galleryItems);
 
 listRef.insertAdjacentHTML("beforeend", galleryItems);
