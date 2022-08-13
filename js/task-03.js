@@ -33,3 +33,17 @@ const galleryItems = images
 //console.log(galleryItems);
 
 listRef.insertAdjacentHTML("beforeend", galleryItems);
+
+//var second map(callback)
+
+const makeImgItemMarkup = image => {
+  return `<li class="gallery__item"><img src=${image.url} alt=${image.alt}></li>`;
+};
+//console.log(makeImgItemMarkup(images[0]));
+
+const makeImgItemsMarkup = images
+  .map(makeImgItemMarkup)
+  .join('');
+//console.log(makeImgItemsMarkup);
+
+//listRef.insertAdjacentHTML("beforeend", makeImgItemsMarkup);

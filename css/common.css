@@ -31,12 +31,13 @@ img {
 .gallery {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 
 }
 
 .gallery__item {
-  flex-basis: auto;
+  flex-basis: calc((100% - 40px) / 3);
   border-radius: 20px;
   overflow: hidden;
   transform: scale(1);
