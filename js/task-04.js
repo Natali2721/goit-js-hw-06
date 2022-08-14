@@ -65,7 +65,7 @@ incrementBtnRef.addEventListener('click', function () {
 });
 */
 // my var2
-
+/*
 
 const counterValueRef = document.querySelector('#value');
 const decrementBtnRef = document.querySelector('button[data-action="decrement"]');
@@ -85,3 +85,26 @@ const decrement = () => {
 
 decrementBtnRef.addEventListener('click', decrement);
 incrementBtnRef.addEventListener('click', increment);
+*/
+
+
+// myVar3
+
+const counterValueRef = document.querySelector('#value');
+const decrementBtn = document.querySelector('button[data-action="decrement"]');
+const incrementBtn = document.querySelector('button[data-action="increment"]');
+
+let counterValue = 0;
+
+function onIncrementBtnClick() {
+    counterValue += 1;
+    counterValueRef.textContent = counterValue;
+};
+
+function onDecrementBtnClick() {
+    counterValue -= 1;
+    counterValueRef.textContent = counterValue;
+};
+
+decrementBtn.addEventListener('click', onDecrementBtnClick);
+incrementBtn.addEventListener('click', onIncrementBtnClick);
